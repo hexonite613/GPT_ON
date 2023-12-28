@@ -1,9 +1,10 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Configuration
+Imports System.Data.SqlClient
+
 Public Class Form1
-    Dim connectionString As String = ""
+    Dim connectionString As String = ConfigurationManager.ConnectionStrings("MyConnectionString").ConnectionString
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Using connection As New SqlConnection(connectionString)
-
             Try
                 connection.Open()
                 Dim query As String = "select * from GPT_Game.dbo.[user];"
