@@ -36,18 +36,18 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(346, 276)
+        Button1.Location = New Point(386, 462)
         Button1.Name = "Button1"
         Button1.Size = New Size(75, 23)
         Button1.TabIndex = 1
-        Button1.Text = "불러오기"
+        Button1.Text = "로그인"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(1097, 616)
         Controls.Add(Button1)
         Controls.Add(Label1)
         Name = "Form1"
