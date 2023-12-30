@@ -1,6 +1,6 @@
 Imports System.Configuration
 Imports System.Data.SqlClient
-Public Class LoginForm1
+Public Class LoginForm
     Dim connectionString As String = ConfigurationManager.ConnectionStrings("MyConnectionString").ConnectionString
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Using connection As New SqlConnection(connectionString)
@@ -51,7 +51,7 @@ Public Class LoginForm1
 
     '비밀번호 잊었을 때 form으로'
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-
+        SignupForm.ShowDialog()
     End Sub
 
 End Class
