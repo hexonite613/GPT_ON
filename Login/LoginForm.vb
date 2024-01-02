@@ -131,7 +131,7 @@ Public Class LoginForm
     '회원 가입 시도'
     Private Sub SignUp_Click(sender As Object, e As EventArgs) Handles SignUp.Click
         Using connection As New SqlConnection(connectionString)
-            If CheckAll(ID.Text, PasswordTextBox.Text, Name_Textbox.Text, BirthDay_Textbox.Text) Then
+            If CheckAll(ID.Text, SignPassword.Text, Name_Textbox.Text, BirthDay_Textbox.Text) Then
 
                 Try
                     connection.Open()
@@ -144,7 +144,7 @@ Public Class LoginForm
                         command.Parameters.AddWithValue("@Birthday", BirthDay_Textbox.Text)
                         MsgBox(Name_Textbox.Text + "님 회원가입을 환영합니다")
                         command.ExecuteNonQuery()
-                        Me.Close()
+                        GroupBox1.Visible = False
                     Else
                         Dim query As String = "Insert Into GPT_Game.dbo.[user] (id, password, name, Birthday, [E-mail]) values (@id, @password, @name, @Birthday, @Email)"
                         Dim command As New SqlCommand(query, connection)
