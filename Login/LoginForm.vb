@@ -44,6 +44,9 @@ Public Class LoginForm
         If loggedInUserName IsNot Nothing Then
             MessageBox.Show("로그인 성공" + vbCrLf + loggedInUserName + "님 환영합니다.")
             Me.Close()
+            Form1.Label2.Text = loggedInUserName + Form1.Label2.Text
+            Form1.Label2.Visible = True
+            Form1.Show()
         Else
             MessageBox.Show("아이디 또는 비밀번호가 틀렸습니다.")
         End If
