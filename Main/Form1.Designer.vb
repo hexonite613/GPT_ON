@@ -26,10 +26,11 @@ Partial Class Form1
         Button1 = New Button()
         Label2 = New Label()
         Main = New GroupBox()
+        ListBox1 = New ListBox()
         Panel1 = New Panel()
         Enter = New Button()
         TextBox1 = New TextBox()
-        ListBox1 = New ListBox()
+        TextBox2 = New TextBox()
         Main.SuspendLayout()
         SuspendLayout()
         ' 
@@ -64,6 +65,7 @@ Partial Class Form1
         ' Main
         ' 
         Main.BackColor = Color.FromArgb(CByte(70), CByte(70), CByte(100))
+        Main.Controls.Add(TextBox2)
         Main.Controls.Add(ListBox1)
         Main.Controls.Add(Panel1)
         Main.Controls.Add(Enter)
@@ -74,6 +76,15 @@ Partial Class Form1
         Main.TabIndex = 3
         Main.TabStop = False
         Main.Text = "GroupBox1"
+        ' 
+        ' ListBox1
+        ' 
+        ListBox1.FormattingEnabled = True
+        ListBox1.ItemHeight = 15
+        ListBox1.Location = New Point(299, 19)
+        ListBox1.Name = "ListBox1"
+        ListBox1.Size = New Size(794, 469)
+        ListBox1.TabIndex = 0
         ' 
         ' Panel1
         ' 
@@ -103,14 +114,15 @@ Partial Class Form1
         TextBox1.Size = New Size(670, 100)
         TextBox1.TabIndex = 1
         ' 
-        ' ListBox1
+        ' TextBox2
         ' 
-        ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 15
-        ListBox1.Location = New Point(299, 19)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(794, 469)
-        ListBox1.TabIndex = 0
+        TextBox2.AcceptsReturn = True
+        TextBox2.AcceptsTab = True
+        TextBox2.Location = New Point(302, 217)
+        TextBox2.Multiline = True
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(791, 271)
+        TextBox2.TabIndex = 5
         ' 
         ' Form1
         ' 
@@ -137,5 +149,6 @@ Partial Class Form1
     Friend WithEvents Enter As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents TextBox2 As TextBox
 
 End Class
