@@ -26,12 +26,14 @@ Partial Class Form1
         Button1 = New Button()
         Label2 = New Label()
         Main = New GroupBox()
+        TextBox2 = New TextBox()
         ListBox1 = New ListBox()
         Panel1 = New Panel()
         Enter = New Button()
         TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
+        Button2 = New Button()
         Main.SuspendLayout()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
@@ -77,6 +79,16 @@ Partial Class Form1
         Main.TabStop = False
         Main.Text = "GroupBox1"
         ' 
+        ' TextBox2
+        ' 
+        TextBox2.AcceptsReturn = True
+        TextBox2.AcceptsTab = True
+        TextBox2.Location = New Point(302, 217)
+        TextBox2.Multiline = True
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(791, 271)
+        TextBox2.TabIndex = 5
+        ' 
         ' ListBox1
         ' 
         ListBox1.FormattingEnabled = True
@@ -89,6 +101,7 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(105))
+        Panel1.Controls.Add(Button2)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(3, 19)
         Panel1.Name = "Panel1"
@@ -114,15 +127,14 @@ Partial Class Form1
         TextBox1.Size = New Size(670, 100)
         TextBox1.TabIndex = 1
         ' 
-        ' TextBox2
+        ' Button2
         ' 
-        TextBox2.AcceptsReturn = True
-        TextBox2.AcceptsTab = True
-        TextBox2.Location = New Point(302, 217)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(791, 271)
-        TextBox2.TabIndex = 5
+        Button2.Location = New Point(96, 149)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(75, 23)
+        Button2.TabIndex = 0
+        Button2.Text = "Button2"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -137,6 +149,7 @@ Partial Class Form1
         Text = "Form1"
         Main.ResumeLayout(False)
         Main.PerformLayout()
+        Panel1.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -150,5 +163,6 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button2 As Button
 
 End Class

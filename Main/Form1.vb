@@ -1,6 +1,7 @@
 ﻿Imports System.Configuration
 Imports System.Net
 Imports Newtonsoft.Json.Linq
+Imports Microsoft.EntityFrameworkCore.Metadata.Internal
 
 Public Class Form1
     Dim apiurl As String = ConfigurationManager.AppSettings("apiurl")
@@ -24,10 +25,10 @@ Public Class Form1
         ' 채팅 서버에 메시지 전송'
         Dim client As New WebClient()
         client.Headers.Add("Content-Type", "application/json")
-            client.Headers.Add("Authorization", "Bearer " & apikey)
+        client.Headers.Add("Authorization", "Bearer " & apikey)
 
-            'Chat Gpt 설정'
-            Dim sendata As String = "{
+        'Chat Gpt 설정'
+        Dim sendata As String = "{
             ""model"":""gpt-3.5-turbo"",
             ""messages"":[
                 {
@@ -43,18 +44,18 @@ Public Class Form1
             ""temperature"": 0.6
         }"
 
-            'Chat Gpt 응답 받기'
-            Dim Raw_Response As String = client.UploadString(apiurl, sendata)
-            ' JSON 파싱'
-            Dim jsonResponse As JObject = JObject.Parse(Raw_Response)
-            '값을 추출'
-            Dim contentValue As String = jsonResponse.SelectToken("choices[0].message.content")?.ToString()
+        'Chat Gpt 응답 받기'
+        Dim Raw_Response As String = client.UploadString(apiurl, sendata)
+        ' JSON 파싱'
+        Dim jsonResponse As JObject = JObject.Parse(Raw_Response)
+        '값을 추출'
+        Dim contentValue As String = jsonResponse.SelectToken("choices[0].message.content")?.ToString()
 
-            'Chat Gpt 응답 출력'
-            AddMessage("요정", contentValue)
+        'Chat Gpt 응답 출력'
+        AddMessage("요정", contentValue)
 
-            ' 메시지 전송 후 텍스트 상자 초기화
-            TextBox1.Text = ""
+        ' 메시지 전송 후 텍스트 상자 초기화
+        TextBox1.Text = ""
     End Sub
 
     Private Sub AddMessage(senderName As String, messageText As String)
@@ -70,7 +71,4 @@ Public Class Form1
         ListBox1.SelectedIndex = ListBox1.Items.Count - 1
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
