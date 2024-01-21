@@ -7,6 +7,7 @@ GPT_ON is a Game based on Chat-GPT where player controls a hero whom left for jo
 
 ### ⏰ Development Periods
 - 2023.12.29~(Now)
+- Exclude Date: 2024.01.09~2024.01.21(✈️Trip)
 
 ### 👨‍💻 Member
 - hexonite613
