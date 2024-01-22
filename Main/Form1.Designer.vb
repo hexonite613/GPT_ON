@@ -26,13 +26,12 @@ Partial Class Form1
         Button1 = New Button()
         Label2 = New Label()
         Main = New GroupBox()
-        TextBox2 = New TextBox()
-        ListBox1 = New ListBox()
+        WebView21 = New Microsoft.Web.WebView2.WinForms.WebView2()
         Panel1 = New Panel()
-        Enter = New Button()
-        TextBox1 = New TextBox()
         Button2 = New Button()
+        TextBox1 = New TextBox()
         Main.SuspendLayout()
+        CType(WebView21, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -56,7 +55,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("맑은 고딕", 20F)
+        Label2.Font = New Font("맑은 고딕", 20F, FontStyle.Regular, GraphicsUnit.Point)
         Label2.Location = New Point(336, 462)
         Label2.Name = "Label2"
         Label2.Size = New Size(194, 37)
@@ -67,11 +66,8 @@ Partial Class Form1
         ' Main
         ' 
         Main.BackColor = Color.FromArgb(CByte(70), CByte(70), CByte(100))
-        Main.Controls.Add(TextBox2)
-        Main.Controls.Add(ListBox1)
+        Main.Controls.Add(WebView21)
         Main.Controls.Add(Panel1)
-        Main.Controls.Add(Enter)
-        Main.Controls.Add(TextBox1)
         Main.Location = New Point(0, -16)
         Main.Name = "Main"
         Main.Size = New Size(1099, 632)
@@ -79,53 +75,27 @@ Partial Class Form1
         Main.TabStop = False
         Main.Text = "GroupBox1"
         ' 
-        ' TextBox2
+        ' WebView21
         ' 
-        TextBox2.AcceptsReturn = True
-        TextBox2.AcceptsTab = True
-        TextBox2.Location = New Point(302, 217)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(791, 271)
-        TextBox2.TabIndex = 5
-        ' 
-        ' ListBox1
-        ' 
-        ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 15
-        ListBox1.Location = New Point(299, 19)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(794, 469)
-        ListBox1.TabIndex = 0
+        WebView21.AllowExternalDrop = True
+        WebView21.CreationProperties = Nothing
+        WebView21.DefaultBackgroundColor = Color.White
+        WebView21.Location = New Point(302, 19)
+        WebView21.Name = "WebView21"
+        WebView21.Size = New Size(783, 607)
+        WebView21.TabIndex = 5
+        WebView21.ZoomFactor = 1R
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(105))
         Panel1.Controls.Add(Button2)
+        Panel1.Controls.Add(TextBox1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(3, 19)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(293, 610)
         Panel1.TabIndex = 4
-        ' 
-        ' Enter
-        ' 
-        Enter.Location = New Point(991, 507)
-        Enter.Name = "Enter"
-        Enter.Size = New Size(102, 99)
-        Enter.TabIndex = 2
-        Enter.Text = "입력"
-        Enter.UseVisualStyleBackColor = True
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.AcceptsReturn = True
-        TextBox1.AcceptsTab = True
-        TextBox1.Location = New Point(299, 507)
-        TextBox1.Multiline = True
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(670, 100)
-        TextBox1.TabIndex = 1
         ' 
         ' Button2
         ' 
@@ -135,6 +105,13 @@ Partial Class Form1
         Button2.TabIndex = 0
         Button2.Text = "Button2"
         Button2.UseVisualStyleBackColor = True
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(71, 475)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(100, 23)
+        TextBox1.TabIndex = 4
         ' 
         ' Form1
         ' 
@@ -148,8 +125,9 @@ Partial Class Form1
         Name = "Form1"
         Text = "Form1"
         Main.ResumeLayout(False)
-        Main.PerformLayout()
+        CType(WebView21, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -158,11 +136,9 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Main As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Enter As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents WebView21 As Microsoft.Web.WebView2.WinForms.WebView2
 
 End Class

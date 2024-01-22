@@ -2,10 +2,15 @@
 Imports System.Net
 Imports Newtonsoft.Json.Linq
 Imports Microsoft.EntityFrameworkCore.Metadata.Internal
+Imports System.IO
+Imports System.Net.Http
 
 Public Class Form1
     Dim apiurl As String = ConfigurationManager.AppSettings("apiurl")
     Dim apikey As String = ConfigurationManager.AppSettings("apikey")
+
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         LoginForm.Show()
         Me.Hide()
@@ -16,7 +21,8 @@ Public Class Form1
         Main.Show()
     End Sub
 
-    Private Sub SendMessageButton_Click(sender As Object, e As EventArgs) Handles Enter.Click
+    'enter.click 추가'
+    Private Sub SendMessageButton_Click(sender As Object, e As EventArgs)
         ' 자신의 메시지를 채팅 창에 추가
         Dim message As String = TextBox1.Text
         AddMessage("나", message)
@@ -46,7 +52,7 @@ Public Class Form1
 
         'Chat Gpt 응답 받기'
         Dim Raw_Response As String = client.UploadString(apiurl, sendata)
-        ' JSON 파싱'
+        'JSON 파싱'
         Dim jsonResponse As JObject = JObject.Parse(Raw_Response)
         '값을 추출'
         Dim contentValue As String = jsonResponse.SelectToken("choices[0].message.content")?.ToString()
@@ -54,21 +60,39 @@ Public Class Form1
         'Chat Gpt 응답 출력'
         AddMessage("요정", contentValue)
 
-        ' 메시지 전송 후 텍스트 상자 초기화
+        '텍스트 상자 초기화'
         TextBox1.Text = ""
     End Sub
 
-    Private Sub AddMessage(senderName As String, messageText As String)
-        ' 채팅 창에 메시지를 추가하는 함수
-        Dim message As String = $"{senderName}: {messageText}"
-        If senderName = "나" Then
-            ListBox1.Items.Add(message)
-        Else
-            ListBox1.Items.Add(message)
-        End If
+    Private Sub AddMessage(sender As Object, e As String)
 
-        ' 채팅 창의 스크롤을 마지막으로 이동
-        ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+    End Sub
+
+
+    '메인 html 상대 경로 설정'
+    Dim RelativePath = "Mainweb\Main.html"
+    '실행 파일 위치'
+    Dim AppDirectory = Path.GetDirectoryName(Reflection.Assembly.GetExecutingAssembly.Location)
+    '루트 디렉토리'
+    Dim RootDirectory = Path.GetFullPath(Path.Combine(AppDirectory, "..\..\.."))
+    '상대 경로랑 합병'
+    Dim HtmlPath = Path.Combine(RootDirectory, RelativePath)
+
+    Private Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' WebView2 초기화
+        Await InitializeWebViewAsync()
+
+        ' HTML 파일 다운로드 및 표시 (상대 경로 사용)
+        LoadHtmlFileAsync(HtmlPath)
+    End Sub
+
+    Private Async Function InitializeWebViewAsync() As Task
+        ' WebView2 컨트롤 초기화
+        Await WebView21.EnsureCoreWebView2Async(Nothing)
+    End Function
+
+    Private Sub LoadHtmlFileAsync(relativePath As String)
+        WebView21.CoreWebView2.Navigate("file:///" & HtmlPath)
     End Sub
 
 End Class
