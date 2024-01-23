@@ -1,13 +1,21 @@
 ﻿Imports System.Configuration
 Imports System.Net
 Imports Newtonsoft.Json.Linq
-Imports Microsoft.EntityFrameworkCore.Metadata.Internal
 Imports System.IO
-Imports System.Net.Http
+Imports Microsoft.Web.WebView2.Core
 
 Public Class Form1
     Dim apiurl As String = ConfigurationManager.AppSettings("apiurl")
     Dim apikey As String = ConfigurationManager.AppSettings("apikey")
+
+    Private Sub Form1_PreLoad(sender As Object, e As EventArgs) Handles MyBase.Load
+        '메인으로 다이렉트'
+        Main.Hide()
+
+        '하드웨어 가속 사용 안함'
+        Environment.SetEnvironmentVariable("WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS", "--disable-auto-reload", EnvironmentVariableTarget.User)
+
+    End Sub
 
 
 
@@ -16,8 +24,16 @@ Public Class Form1
         Me.Hide()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Async Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         Label2.Visible = False
+        ' WebView2 초기화
+        Await InitializeWebViewAsync()
+
+        ' HTML 파일 다운로드 및 표시 (상대 경로 사용)
+        LoadHtmlFileAsync(HtmlPath)
+
+        WebView21.CoreWebView2.Settings.IsScriptEnabled = True
+
         Main.Show()
     End Sub
 
@@ -77,14 +93,6 @@ Public Class Form1
     Dim RootDirectory = Path.GetFullPath(Path.Combine(AppDirectory, "..\..\.."))
     '상대 경로랑 합병'
     Dim HtmlPath = Path.Combine(RootDirectory, RelativePath)
-
-    Private Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' WebView2 초기화
-        Await InitializeWebViewAsync()
-
-        ' HTML 파일 다운로드 및 표시 (상대 경로 사용)
-        LoadHtmlFileAsync(HtmlPath)
-    End Sub
 
     Private Async Function InitializeWebViewAsync() As Task
         ' WebView2 컨트롤 초기화

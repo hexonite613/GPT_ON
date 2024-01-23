@@ -34,7 +34,7 @@ Public Class LoginForm
     End Function
 
     '로그인 시도'
-    Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles Login.Click
+    Private Async Sub LoginButton_Click(sender As Object, e As EventArgs) Handles Login.Click
         Dim username As String = UsernameTextBox.Text
         Dim password As String = PasswordTextBox.Text
 
@@ -43,6 +43,7 @@ Public Class LoginForm
 
         If loggedInUserName IsNot Nothing Then
             MessageBox.Show("로그인 성공" + vbCrLf + loggedInUserName + "님 환영합니다.")
+
             Me.Close()
             Form1.Label2.Text = loggedInUserName + Form1.Label2.Text
             Form1.Label2.Visible = True
@@ -175,5 +176,6 @@ Public Class LoginForm
     Private Sub Back_Login_Click(sender As Object, e As EventArgs) Handles Back_Login.Click
         GroupBox1.Visible = False
     End Sub
+
 End Class
 

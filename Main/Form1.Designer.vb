@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports Microsoft.Web.WebView2.Core
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
@@ -81,6 +83,7 @@ Partial Class Form1
         WebView21.CreationProperties = Nothing
         WebView21.DefaultBackgroundColor = Color.White
         WebView21.Location = New Point(302, 19)
+        WebView21.Margin = New Padding(0)
         WebView21.Name = "WebView21"
         WebView21.Size = New Size(783, 607)
         WebView21.TabIndex = 5
