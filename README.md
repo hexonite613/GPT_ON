@@ -22,7 +22,8 @@ GPT_ON is a Game based on Chat-GPT where player controls a hero whom left for jo
 ### ✔️ To_Do List
 - Revise of Login Design
 - Signup Design
-- Bring Chat_GPT AI
-- Set Chatting Panel
-- Chatting Panel Design
+- ~~Bring Chat_GPT AI~~✔️
+- ~~Set Chatting Panel~~✔️
+- Chatting Panel Design Improvement
 - User Inquiry Inbox(+Design)
+- GPT Speed Improvement
