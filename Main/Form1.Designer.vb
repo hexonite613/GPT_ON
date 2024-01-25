@@ -24,17 +24,16 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label1 = New Label()
-        Button1 = New Button()
         Label2 = New Label()
         Main = New GroupBox()
         WebView21 = New Microsoft.Web.WebView2.WinForms.WebView2()
         Panel1 = New Panel()
-        Button2 = New Button()
-        TextBox1 = New TextBox()
+        Button1 = New Guna.UI2.WinForms.Guna2Button()
         Main.SuspendLayout()
         CType(WebView21, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
@@ -45,20 +44,11 @@ Partial Class Form1
         Label1.Size = New Size(0, 15)
         Label1.TabIndex = 0
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(386, 462)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 1
-        Button1.Text = "로그인"
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("맑은 고딕", 20F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(336, 462)
+        Label2.Location = New Point(809, 344)
         Label2.Name = "Label2"
         Label2.Size = New Size(194, 37)
         Label2.TabIndex = 2
@@ -72,7 +62,7 @@ Partial Class Form1
         Main.Controls.Add(Panel1)
         Main.Location = New Point(0, -16)
         Main.Name = "Main"
-        Main.Size = New Size(1099, 632)
+        Main.Size = New Size(1266, 939)
         Main.TabIndex = 3
         Main.TabStop = False
         Main.Text = "GroupBox1"
@@ -85,63 +75,63 @@ Partial Class Form1
         WebView21.Location = New Point(302, 19)
         WebView21.Margin = New Padding(0)
         WebView21.Name = "WebView21"
-        WebView21.Size = New Size(783, 607)
+        WebView21.Size = New Size(961, 917)
         WebView21.TabIndex = 5
         WebView21.ZoomFactor = 1R
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(105))
-        Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(TextBox1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(3, 19)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(293, 610)
+        Panel1.Size = New Size(293, 917)
         Panel1.TabIndex = 4
         ' 
-        ' Button2
+        ' Button1
         ' 
-        Button2.Location = New Point(96, 149)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(75, 23)
-        Button2.TabIndex = 0
-        Button2.Text = "Button2"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(71, 475)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(100, 23)
-        TextBox1.TabIndex = 4
+        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Button1.Animated = True
+        Button1.AutoRoundedCorners = True
+        Button1.BorderRadius = 21
+        Button1.BorderStyle = Drawing2D.DashStyle.DashDot
+        Button1.CustomizableEdges = CustomizableEdges1
+        Button1.DisabledState.BorderColor = Color.DarkGray
+        Button1.DisabledState.CustomBorderColor = Color.DarkGray
+        Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(526, 766)
+        Button1.Name = "Button1"
+        Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Button1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Button1.Size = New Size(180, 45)
+        Button1.TabIndex = 4
+        Button1.Text = "로그인 및 회원가입"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1097, 616)
+        ClientSize = New Size(1264, 921)
         Controls.Add(Main)
         Controls.Add(Label2)
-        Controls.Add(Button1)
         Controls.Add(Label1)
+        Controls.Add(Button1)
         Name = "Form1"
         Text = "Form1"
         Main.ResumeLayout(False)
         CType(WebView21, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Main As GroupBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents WebView21 As Microsoft.Web.WebView2.WinForms.WebView2
+    Friend WithEvents Button1 As Guna.UI2.WinForms.Guna2Button
 
 End Class

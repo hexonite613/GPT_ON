@@ -17,6 +17,7 @@ GPT_ON is a Game based on Chat-GPT where player controls a hero whom left for jo
 - Language: Visual Basic, HTML, CSS, JS
 - IDE: Visual Studio 2022
 - Database: Azure Database
+- Frame: Simple Chat UI, Guna Winform UI
 
 
 ### ✔️ To_Do List

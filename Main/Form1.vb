@@ -1,8 +1,6 @@
 ﻿Imports System.Configuration
-Imports System.Net
-Imports Newtonsoft.Json.Linq
 Imports System.IO
-Imports Microsoft.Web.WebView2.Core
+
 
 Public Class Form1
     Dim apiurl As String = ConfigurationManager.AppSettings("apiurl")
@@ -21,7 +19,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         LoginForm.Show()
-        Me.Hide()
+        Hide()
     End Sub
 
     Private Async Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
@@ -34,56 +32,11 @@ Public Class Form1
 
         WebView21.CoreWebView2.Settings.IsScriptEnabled = True
 
+        '개발자 도구 막기'
+        WebView21.CoreWebView2.Settings.AreDevToolsEnabled = False
+
         Main.Show()
     End Sub
-
-    'enter.click 추가'
-    Private Sub SendMessageButton_Click(sender As Object, e As EventArgs)
-        ' 자신의 메시지를 채팅 창에 추가
-        Dim message As String = TextBox1.Text
-        AddMessage("나", message)
-
-
-        ' 채팅 서버에 메시지 전송'
-        Dim client As New WebClient()
-        client.Headers.Add("Content-Type", "application/json")
-        client.Headers.Add("Authorization", "Bearer " & apikey)
-
-        'Chat Gpt 설정'
-        Dim sendata As String = "{
-            ""model"":""gpt-3.5-turbo"",
-            ""messages"":[
-                {
-                    ""role"":""system"",
-                    ""content"":""넌 용사님을 돕는 요정이야""
-                },
-                {
-                    ""role"":""user"",
-                    ""content"":""" & message & """
-                }
-            ],
-            ""max_tokens"": 100,
-            ""temperature"": 0.6
-        }"
-
-        'Chat Gpt 응답 받기'
-        Dim Raw_Response As String = client.UploadString(apiurl, sendata)
-        'JSON 파싱'
-        Dim jsonResponse As JObject = JObject.Parse(Raw_Response)
-        '값을 추출'
-        Dim contentValue As String = jsonResponse.SelectToken("choices[0].message.content")?.ToString()
-
-        'Chat Gpt 응답 출력'
-        AddMessage("요정", contentValue)
-
-        '텍스트 상자 초기화'
-        TextBox1.Text = ""
-    End Sub
-
-    Private Sub AddMessage(sender As Object, e As String)
-
-    End Sub
-
 
     '메인 html 상대 경로 설정'
     Dim RelativePath = "Mainweb\Main.html"

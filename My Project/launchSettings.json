@@ -2,7 +2,7 @@
   "profiles": {
     "GPT_ON": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\sungt\\OneDrive\\바탕 화면\\repos\\hexonite613\\GPT_ON"
+      "workingDirectory": "C:\\Users\\sungt\\source\\repos\\hexonite613"
     }
   }
 }
