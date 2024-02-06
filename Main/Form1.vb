@@ -10,14 +10,12 @@ Public Class Form1
         '메인으로 다이렉트'
         Main.Hide()
 
-        '하드웨어 가속 사용 안함'
-        Environment.SetEnvironmentVariable("WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS", "--disable-auto-reload", EnvironmentVariableTarget.User)
-
+        '텍스트 부모 변경'
+        Label3.Parent = PictureBox1
     End Sub
 
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Login_Click(sender As Object, e As EventArgs) Handles Label3.Click
         LoginForm.Show()
         Hide()
     End Sub

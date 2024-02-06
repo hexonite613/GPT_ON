@@ -31,9 +31,11 @@ Partial Class Form1
         Main = New GroupBox()
         WebView21 = New Microsoft.Web.WebView2.WinForms.WebView2()
         Panel1 = New Panel()
-        Button1 = New Guna.UI2.WinForms.Guna2Button()
+        PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label3 = New Label()
         Main.SuspendLayout()
         CType(WebView21, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -60,7 +62,7 @@ Partial Class Form1
         Main.BackColor = Color.FromArgb(CByte(70), CByte(70), CByte(100))
         Main.Controls.Add(WebView21)
         Main.Controls.Add(Panel1)
-        Main.Location = New Point(0, -16)
+        Main.Location = New Point(12, 918)
         Main.Name = "Main"
         Main.Size = New Size(1266, 939)
         Main.TabIndex = 3
@@ -88,41 +90,47 @@ Partial Class Form1
         Panel1.Size = New Size(293, 917)
         Panel1.TabIndex = 4
         ' 
-        ' Button1
+        ' PictureBox1
         ' 
-        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button1.Animated = True
-        Button1.AutoRoundedCorners = True
-        Button1.BorderRadius = 21
-        Button1.BorderStyle = Drawing2D.DashStyle.DashDot
-        Button1.CustomizableEdges = CustomizableEdges1
-        Button1.DisabledState.BorderColor = Color.DarkGray
-        Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(526, 766)
-        Button1.Name = "Button1"
-        Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Button1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Button1.Size = New Size(180, 45)
-        Button1.TabIndex = 4
-        Button1.Text = "로그인 및 회원가입"
+        PictureBox1.CustomizableEdges = CustomizableEdges1
+        PictureBox1.Image = My.Resources.Resources.maingif
+        PictureBox1.ImageRotate = 0F
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        PictureBox1.Size = New Size(1264, 921)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 6
+        PictureBox1.TabStop = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("던파 비트비트체 v2", 25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(491, 789)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(304, 50)
+        Label3.TabIndex = 7
+        Label3.Text = "로그인 및 회원가입"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1264, 921)
+        Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         Controls.Add(Main)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(Button1)
         Name = "Form1"
         Text = "Form1"
         Main.ResumeLayout(False)
         CType(WebView21, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -132,6 +140,7 @@ Partial Class Form1
     Friend WithEvents Main As GroupBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents WebView21 As Microsoft.Web.WebView2.WinForms.WebView2
-    Friend WithEvents Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label3 As Label
 
 End Class
