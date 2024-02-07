@@ -6,6 +6,12 @@ Public Class LoginForm
         Using connection As New SqlConnection(connectionString)
             connection.Open()
         End Using
+
+        '로그인 배경 색깔 지정'
+        Login_Form.BackColor = Color.FromArgb(35, 42, 63)
+        GroupBox1.BackColor = Color.FromArgb(35, 42, 63)
+
+
     End Sub
 
     ' 로그인 확인 함수'
@@ -47,6 +53,7 @@ Public Class LoginForm
             Me.Close()
             Form1.Label2.Text = loggedInUserName + Form1.Label2.Text
             Form1.Label2.Visible = True
+            Form1.Label3.Visible = False
             Form1.Show()
         Else
             MessageBox.Show("아이디 또는 비밀번호가 틀렸습니다.")
@@ -139,6 +146,7 @@ Public Class LoginForm
 
                 Try
                     connection.Open()
+
                     If Email_Textbox.Text = "" Then
                         Dim query As String = "Insert Into GPT_Game.dbo.[user] (id, password, name, Birthday) values (@id, @password, @name, @Birthday)"
                         Dim command As New SqlCommand(query, connection)
@@ -177,5 +185,8 @@ Public Class LoginForm
         GroupBox1.Visible = False
     End Sub
 
+    Private Sub end_click(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Form1.Show()
+    End Sub
 End Class
 
