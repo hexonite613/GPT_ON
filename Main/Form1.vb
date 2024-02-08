@@ -1,12 +1,12 @@
 ﻿Imports System.Configuration
 Imports System.IO
-Imports System.Media
+
 
 
 Public Class Form1
     Dim apiurl As String = ConfigurationManager.AppSettings("apiurl")
     Dim apikey As String = ConfigurationManager.AppSettings("apikey")
-    Dim backgroundMusic As SoundPlayer
+
     Dim isplaying = True
 
     '실행 파일 위치'
@@ -18,8 +18,12 @@ Public Class Form1
         '메인으로 다이렉트'
         Main.Hide()
 
-        backgroundMusic = New SoundPlayer(My.Resources.backgroundms)
-        backgroundMusic.PlayLooping()
+        '시험을 위한 로그인 스킵'
+        Label2_Click(sender, e)
+
+        Dim backgroundmspath = Path.Combine(RootDirectory, "Resources\background\backgroundms.wav")
+        backgroundms.URL = backgroundmspath
+
 
         '투명 배경을 이미지로 투영시키기 위한 부모 변경'
         Label3.Parent = PictureBox1
@@ -29,6 +33,9 @@ Public Class Form1
         Label4.Parent = PictureBox1
         Label4.BackColor = Color.Transparent
         PictureBox4.Parent = PictureBox1
+        Soundbar.Parent = PictureBox1
+        PictureBox5.Parent = PictureBox3
+
         'Label2 위치 조정'
         Dim labelX = (Me.Size.Width - Label2.Size.Width) / 2
         Label2.Location = New Point(labelX, Label2.Location.Y)
@@ -73,13 +80,20 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        backgroundMusic.Stop()
         If isplaying = True Then
-            backgroundMusic.Stop()
+            backgroundms.Ctlcontrols.pause()
+            PictureBox4.Image = My.Resources.play_button_arrowhead
             isplaying = False
         Else
-            backgroundMusic.PlayLooping()
+            backgroundms.Ctlcontrols.play()
+            PictureBox4.Image = My.Resources.pause
             isplaying = True
         End If
+    End Sub
+
+    Private Sub Soundbar_Scroll(sender As Object, e As ScrollEventArgs) Handles Soundbar.Scroll
+
+        ' 배경 음악의 볼륨을 조절합니다.
+        backgroundms.settings.volume = Soundbar.Value
     End Sub
 End Class

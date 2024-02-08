@@ -30,15 +30,20 @@ Partial Class Form1
         Label1 = New Label()
         Label2 = New Label()
         Main = New GroupBox()
+        PictureBox5 = New PictureBox()
+        backgroundms = New AxWMPLib.AxWindowsMediaPlayer()
         WebView21 = New Microsoft.Web.WebView2.WinForms.WebView2()
         PictureBox3 = New PictureBox()
         PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label3 = New Label()
         PictureBox2 = New PictureBox()
         GroupBox1 = New GroupBox()
+        Soundbar = New Guna.UI2.WinForms.Guna2TrackBar()
         Label4 = New Label()
         PictureBox4 = New PictureBox()
         Main.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(backgroundms, ComponentModel.ISupportInitialize).BeginInit()
         CType(WebView21, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -69,31 +74,54 @@ Partial Class Form1
         ' Main
         ' 
         Main.BackColor = Color.FromArgb(CByte(70), CByte(70), CByte(100))
+        Main.Controls.Add(PictureBox5)
+        Main.Controls.Add(backgroundms)
         Main.Controls.Add(WebView21)
         Main.Controls.Add(PictureBox3)
-        Main.Location = New Point(464, 412)
+        Main.Location = New Point(0, 0)
         Main.Name = "Main"
-        Main.Size = New Size(1266, 939)
+        Main.Size = New Size(1272, 939)
         Main.TabIndex = 3
         Main.TabStop = False
         Main.Text = "GroupBox1"
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackColor = Color.Transparent
+        PictureBox5.Image = My.Resources.Resources.boy_portrait1
+        PictureBox5.Location = New Point(43, 205)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(445, 498)
+        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox5.TabIndex = 11
+        PictureBox5.TabStop = False
+        ' 
+        ' backgroundms
+        ' 
+        backgroundms.Enabled = True
+        backgroundms.Location = New Point(20, 36)
+        backgroundms.Name = "backgroundms"
+        backgroundms.OcxState = CType(resources.GetObject("backgroundms.OcxState"), AxHost.State)
+        backgroundms.Size = New Size(75, 23)
+        backgroundms.TabIndex = 10
+        backgroundms.Visible = False
         ' 
         ' WebView21
         ' 
         WebView21.AllowExternalDrop = True
         WebView21.CreationProperties = Nothing
         WebView21.DefaultBackgroundColor = Color.White
-        WebView21.Location = New Point(505, 19)
+        WebView21.Location = New Point(514, 14)
         WebView21.Margin = New Padding(0)
         WebView21.Name = "WebView21"
-        WebView21.Size = New Size(758, 917)
+        WebView21.Size = New Size(758, 922)
         WebView21.TabIndex = 5
         WebView21.ZoomFactor = 1R
         ' 
         ' PictureBox3
         ' 
         PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
-        PictureBox3.Location = New Point(-2, 16)
+        PictureBox3.Location = New Point(0, 13)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(515, 921)
         PictureBox3.TabIndex = 6
@@ -137,9 +165,10 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(Main)
+        GroupBox1.Controls.Add(Soundbar)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(PictureBox4)
-        GroupBox1.Controls.Add(Main)
         GroupBox1.Controls.Add(PictureBox2)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(PictureBox1)
@@ -151,12 +180,21 @@ Partial Class Form1
         GroupBox1.TabStop = False
         GroupBox1.Text = "GroupBox1"
         ' 
+        ' Soundbar
+        ' 
+        Soundbar.BackColor = Color.Transparent
+        Soundbar.Location = New Point(20, 802)
+        Soundbar.Name = "Soundbar"
+        Soundbar.Size = New Size(191, 23)
+        Soundbar.TabIndex = 11
+        Soundbar.ThumbColor = Color.FromArgb(CByte(160), CByte(113), CByte(255))
+        ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("던파 비트비트체 v2", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(40, 830)
+        Label4.Location = New Point(69, 830)
         Label4.Name = "Label4"
         Label4.Size = New Size(91, 17)
         Label4.TabIndex = 9
@@ -166,7 +204,7 @@ Partial Class Form1
         ' 
         PictureBox4.BackColor = Color.Transparent
         PictureBox4.Image = My.Resources.Resources.pause
-        PictureBox4.Location = New Point(60, 851)
+        PictureBox4.Location = New Point(89, 851)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(50, 50)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -184,6 +222,8 @@ Partial Class Form1
         Name = "Form1"
         Text = "Form1"
         Main.ResumeLayout(False)
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(backgroundms, ComponentModel.ISupportInitialize).EndInit()
         CType(WebView21, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -206,5 +246,8 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Soundbar As Guna.UI2.WinForms.Guna2TrackBar
+    Friend WithEvents backgroundms As AxWMPLib.AxWindowsMediaPlayer
+    Friend WithEvents PictureBox5 As PictureBox
 
 End Class

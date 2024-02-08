@@ -40,7 +40,7 @@ Public Class LoginForm
     End Function
 
     '로그인 시도'
-    Private Async Sub LoginButton_Click(sender As Object, e As EventArgs) Handles Login.Click
+    Private Async Sub LoginButton_Click(sender As Object, e As EventArgs) Handles Login_button.Click
         Dim username As String = UsernameTextBox.Text
         Dim password As String = PasswordTextBox.Text
 
@@ -185,7 +185,7 @@ Public Class LoginForm
         GroupBox1.Visible = False
     End Sub
 
-    Private Sub end_click(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub End_click(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Form1.Show()
     End Sub
 End Class

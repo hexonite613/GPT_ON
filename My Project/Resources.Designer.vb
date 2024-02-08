@@ -61,16 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        '''</summary>
-        Friend ReadOnly Property _9091671__1_() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("9091671 (1)", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
         Friend ReadOnly Property backgroundms() As System.IO.UnmanagedMemoryStream
@@ -82,9 +72,19 @@ Namespace My.Resources
         '''<summary>
         '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
-        Friend ReadOnly Property bg() As System.Drawing.Bitmap
+        Friend ReadOnly Property boy_portrait() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("bg", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("boy portrait", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property boy_portrait1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("boy portrait1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -96,26 +96,6 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Copy of Pixel Blender_AreS4iGZRQmaaYELxZ-7yw_night time of whole glassed cafe wit"& _ 
                         "h clean and modern bar, background_inference-img2img_2_1707293432", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        '''</summary>
-        Friend ReadOnly Property dau3en3_223b2ee3_c272_4f7f_818e_11128039b1ba() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("dau3en3-223b2ee3-c272-4f7f-818e-11128039b1ba", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        '''</summary>
-        Friend ReadOnly Property logo_transparent() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("logo_transparent", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -173,6 +153,16 @@ Namespace My.Resources
         '''<summary>
         '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
+        Friend ReadOnly Property play_button_arrowhead() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("play-button-arrowhead", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
         Friend ReadOnly Property revised_expand() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("revised expand", resourceCulture)
@@ -186,16 +176,6 @@ Namespace My.Resources
         Friend ReadOnly Property revised_expand_right_side() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("revised expand right side", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        '''</summary>
-        Friend ReadOnly Property revised_expand1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("revised expand1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

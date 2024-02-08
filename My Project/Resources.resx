@@ -118,46 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="9091671 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9091671 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="revised expand right side" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main background\revised expand right side.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main background\main2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Copy of Pixel Blender_AreS4iGZRQmaaYELxZ-7yw_night time of whole glassed cafe with clean and modern bar, background_inference-img2img_2_1707293432" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Copy of Pixel Blender_AreS4iGZRQmaaYELxZ-7yw_night time of whole glassed cafe with clean and modern bar, background_inference-img2img_2_1707293432.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="revised expand1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main background\revised expand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_transparent color revise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo\logo_transparent color revise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boy portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Portraits\Boy\boy portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="only logo white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo\only logo white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dau3en3-223b2ee3-c272-4f7f-818e-11128039b1ba" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Portraits\dau3en3-223b2ee3-c272-4f7f-818e-11128039b1ba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_transparent color revise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo\logo_transparent color revise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="revised expand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main background\revised expand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Copy of Pixel Blender_AreS4iGZRQmaaYELxZ-7yw_night time of whole glassed cafe with clean and modern bar, background_inference-img2img_2_1707293432" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background\Copy of Pixel Blender_AreS4iGZRQmaaYELxZ-7yw_night time of whole glassed cafe with clean and modern bar, background_inference-img2img_2_1707293432.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background\main2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maingif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main background\maingif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundms" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundms.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\background\maingif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\extras\pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="revised expand right side" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background\revised expand right side.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="revised expand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background\revised expand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundms" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background\backgroundms.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="play-button-arrowhead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play-button-arrowhead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boy portrait1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Portraits\Boy\boy portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -2,16 +2,16 @@ const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
-// Icons made by Freepik from www.flaticon.com
-const BOT_IMG = "../Resources/A29R_J69TUaQYY4ihLEEmw_background-removal_1706167110.png";
+
+const BOT_IMG = "../Resources/Portraits/Boy/chat_portrait.png";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
 const BOT_NAME = "GPT";
 const PERSON_NAME = "user";
 
-import { apiKey, apiUrl } from './config.js';
+//import { apiKey, apiUrl } from './config.js';
 
-//const apiUrl = "";
-//const apiKey = "";
+const apiUrl = "https://api.openai.com/v1/chat/completions";
+const apiKey = "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";
 
 
 // 마우스 오른쪽 클릭 방지
