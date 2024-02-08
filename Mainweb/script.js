@@ -4,7 +4,7 @@ const msgerChat = get(".msger-chat");
 
 
 const BOT_IMG = "../Resources/Portraits/Boy/chat_portrait.png";
-const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
+const PERSON_IMG = "../Resources/Portraits/player.png";
 const BOT_NAME = "GPT";
 const PERSON_NAME = "user";
 
@@ -35,7 +35,7 @@ msgerForm.addEventListener("submit", event => {
 function botResponse(prompt) {
     //GPT 명령 생성
     const converse = [
-        { role: 'system', content: '넌 용사님을 돕는 요정이야' },
+        { role: 'system', content: '너는 바에서 술을 마시며 나에게 고민을 털어놓는 손님이야' },
         { role: 'user', content: prompt }
     ];
 
@@ -43,7 +43,7 @@ function botResponse(prompt) {
         model: 'gpt-3.5-turbo',
         messages: converse,
         max_tokens: 100,
-        temperature: 0.6,
+        temperature: 0.2,
     }, {
         headers: {
             'Content-Type': 'application/json',
