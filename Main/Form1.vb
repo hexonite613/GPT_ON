@@ -18,9 +18,6 @@ Public Class Form1
         '메인으로 다이렉트'
         Main.Hide()
 
-        '시험을 위한 로그인 스킵'
-        Label2_Click(sender, e)
-
         Dim backgroundmspath = Path.Combine(RootDirectory, "Resources\background\backgroundms.wav")
         backgroundms.URL = backgroundmspath
 

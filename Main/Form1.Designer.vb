@@ -31,9 +31,9 @@ Partial Class Form1
         Label2 = New Label()
         Main = New GroupBox()
         PictureBox5 = New PictureBox()
+        PictureBox3 = New PictureBox()
         backgroundms = New AxWMPLib.AxWindowsMediaPlayer()
         WebView21 = New Microsoft.Web.WebView2.WinForms.WebView2()
-        PictureBox3 = New PictureBox()
         PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label3 = New Label()
         PictureBox2 = New PictureBox()
@@ -43,9 +43,9 @@ Partial Class Form1
         PictureBox4 = New PictureBox()
         Main.SuspendLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(backgroundms, ComponentModel.ISupportInitialize).BeginInit()
         CType(WebView21, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
@@ -75,9 +75,9 @@ Partial Class Form1
         ' 
         Main.BackColor = Color.FromArgb(CByte(70), CByte(70), CByte(100))
         Main.Controls.Add(PictureBox5)
+        Main.Controls.Add(PictureBox3)
         Main.Controls.Add(backgroundms)
         Main.Controls.Add(WebView21)
-        Main.Controls.Add(PictureBox3)
         Main.Location = New Point(0, 0)
         Main.Name = "Main"
         Main.Size = New Size(1272, 939)
@@ -88,13 +88,22 @@ Partial Class Form1
         ' PictureBox5
         ' 
         PictureBox5.BackColor = Color.Transparent
-        PictureBox5.Image = My.Resources.Resources.boy_portrait1
-        PictureBox5.Location = New Point(43, 205)
+        PictureBox5.Image = My.Resources.Resources.Copy_of_Pixel_Blender_CG7BsY6JRgKAhBb3F57odw_bartender_inference_img2img_1_1707458732_removebg
+        PictureBox5.Location = New Point(0, 101)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(445, 498)
-        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox5.Size = New Size(525, 599)
+        PictureBox5.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox5.TabIndex = 11
         PictureBox5.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
+        PictureBox3.Location = New Point(6, 12)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(519, 921)
+        PictureBox3.TabIndex = 6
+        PictureBox3.TabStop = False
         ' 
         ' backgroundms
         ' 
@@ -111,21 +120,12 @@ Partial Class Form1
         WebView21.AllowExternalDrop = True
         WebView21.CreationProperties = Nothing
         WebView21.DefaultBackgroundColor = Color.White
-        WebView21.Location = New Point(514, 14)
+        WebView21.Location = New Point(517, 12)
         WebView21.Margin = New Padding(0)
         WebView21.Name = "WebView21"
-        WebView21.Size = New Size(758, 922)
+        WebView21.Size = New Size(764, 924)
         WebView21.TabIndex = 5
         WebView21.ZoomFactor = 1R
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
-        PictureBox3.Location = New Point(0, 13)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(515, 921)
-        PictureBox3.TabIndex = 6
-        PictureBox3.TabStop = False
         ' 
         ' PictureBox1
         ' 
@@ -223,9 +223,9 @@ Partial Class Form1
         Text = "Form1"
         Main.ResumeLayout(False)
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(backgroundms, ComponentModel.ISupportInitialize).EndInit()
         CType(WebView21, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)

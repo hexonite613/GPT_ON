@@ -72,30 +72,21 @@ Namespace My.Resources
         '''<summary>
         '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         '''</summary>
-        Friend ReadOnly Property boy_portrait() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boy portrait", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        '''</summary>
-        Friend ReadOnly Property boy_portrait1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boy portrait1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        '''</summary>
         Friend ReadOnly Property Copy_of_Pixel_Blender_AreS4iGZRQmaaYELxZ_7yw_night_time_of_whole_glassed_cafe_with_clean_and_modern_bar__background_inference_img2img_2_1707293432() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Copy of Pixel Blender_AreS4iGZRQmaaYELxZ-7yw_night time of whole glassed cafe wit"& _ 
                         "h clean and modern bar, background_inference-img2img_2_1707293432", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property Copy_of_Pixel_Blender_CG7BsY6JRgKAhBb3F57odw_bartender_inference_img2img_1_1707458732_removebg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Copy_of_Pixel_Blender_CG7BsY6JRgKAhBb3F57odw_bartender_inference-img2img_1_170745"& _ 
+                        "8732-removebg", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -2,11 +2,11 @@
 
 
 ### 💡 GPT_ON Concept
-GPT_ON is a Game based on Chat-GPT where player controls a hero whom left for journey to revenge to dragon through Chat-GPT.
+GPT_ON is a Program based on Chat-GPT where player can discuss their personal worries to gpt and get a cocktail recommendation.
 
 
 ### ⏰ Development Periods
-- 2023.12.29~(Now)
+- 2023.12.29~2024.02.09
 - Exclude Date: 2024.01.09-2024.01.21(✈️Trip), 2024.01.27-2024.02.04(📓Test)
 
 ### 👨‍💻 Member
@@ -17,7 +17,8 @@ GPT_ON is a Game based on Chat-GPT where player controls a hero whom left for jo
 - Language: Visual Basic, HTML, CSS, JS
 - IDE: Visual Studio 2022
 - Database: Azure Database
-- Frame: Simple Chat UI, Guna Winform UI
+- Frame: Simple Chat UI, Node.js, Guna Winform UI
+- Solutions: axios, Microsoft.web.webview2, NewtonSoft.json, System.Data.SqlClient
 
 
 ### ✔️ To_Do List
@@ -28,3 +29,10 @@ GPT_ON is a Game based on Chat-GPT where player controls a hero whom left for jo
 - ~~Chatting Panel Design Improvement~~✔️
 - User Inquiry Inbox(+Design)
 - ~~GPT Speed Improvement~~✔️
+
+
+### 💻If continue to develop:
+- Show emotional changes
+- Update prompt
+- User inquiry inbox
+- Better setting ui for users

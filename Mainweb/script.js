@@ -3,15 +3,12 @@ const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
 
-const BOT_IMG = "../Resources/Portraits/Boy/chat_portrait.png";
+const BOT_IMG = "../Resources/chat_portrait.png";
 const PERSON_IMG = "../Resources/Portraits/player.png";
-const BOT_NAME = "GPT";
+const BOT_NAME = "Bartender";
 const PERSON_NAME = "user";
 
-//import { apiKey, apiUrl } from './config.js';
-
-const apiUrl = "https://api.openai.com/v1/chat/completions";
-const apiKey = "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";
+import { apiKey, apiUrl } from './config.js';
 
 
 // 마우스 오른쪽 클릭 방지
@@ -35,15 +32,18 @@ msgerForm.addEventListener("submit", event => {
 function botResponse(prompt) {
     //GPT 명령 생성
     const converse = [
-        { role: 'system', content: '너는 바에서 술을 마시며 나에게 고민을 털어놓는 손님이야' },
+        {
+            role: 'system', content:
+                'you are a bartender from bar. user is customer to bar with worries. At first, you should ask customer what to order. when solving user problem, recommend cocktail that best describes solution' },
         { role: 'user', content: prompt }
     ];
 
     axios.post(apiUrl, {
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-3.5-turbo-0125',
         messages: converse,
-        max_tokens: 100,
-        temperature: 0.2,
+        temperature: 0.3,
+        frequency_penalty: 1,
+        presence_penalty: 0.5,
     }, {
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +61,6 @@ function botResponse(prompt) {
 }
 
 function appendMessage(name, img, side, text) {
-    //   Simple solution for small apps
     const msgHTML = `
     <div class="msg ${side}-msg">
       <div class="msg-img" style="background-image: url(${img})"></div>
@@ -81,7 +80,6 @@ function appendMessage(name, img, side, text) {
     msgerChat.scrollTop += 500;
 }
 
-// Utils
 function get(selector, root = document) {
     return root.querySelector(selector);
 }

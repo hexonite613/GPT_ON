@@ -121,7 +121,7 @@ body {
   display: flex;
   padding: 10px;
   border-top: var(--border);
-  background: #eee;
+  background: #99837a;
 }
 .msger-inputarea * {
   padding: 10px;
@@ -130,8 +130,8 @@ body {
   font-size: 1em;
 }
 .msger-input {
-  flex: 1;
-  background: #ddd;
+    flex: 1;
+    background: #c5b69b;
 }
 .msger-send-btn {
   margin-left: 10px;
@@ -146,7 +146,7 @@ body {
 }
 
 .msger-chat {
-    background-color: #f0f0f0;
+    background-color: #59464c;
     background-repeat: no-repeat;
     background-size: auto;
 }
