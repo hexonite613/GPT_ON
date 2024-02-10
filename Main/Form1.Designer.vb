@@ -219,6 +219,9 @@ Partial Class Form1
         ClientSize = New Size(1264, 921)
         Controls.Add(Label1)
         Controls.Add(GroupBox1)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "Form1"
         Text = "Form1"
         Main.ResumeLayout(False)

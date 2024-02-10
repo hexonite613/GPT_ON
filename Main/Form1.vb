@@ -21,7 +21,6 @@ Public Class Form1
         Dim backgroundmspath = Path.Combine(RootDirectory, "Resources\background\backgroundms.wav")
         backgroundms.URL = backgroundmspath
 
-
         '투명 배경을 이미지로 투영시키기 위한 부모 변경'
         Label3.Parent = PictureBox1
         PictureBox2.Parent = PictureBox1
